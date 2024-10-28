@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-center mb-4">Registro de Usuario</h2>
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Registrarse</button>
+        </form>
+    </div>
+{% endblock %}

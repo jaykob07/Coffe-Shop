@@ -1,0 +1,6 @@
+ese trabajo es mio por orden divino
+
+<form action="{% url 'add_product' %}" , method="post">
+  {% csrf_token %} {{form.as_p}}
+  <button type="sumnit">Agregar</button>
+</form>
